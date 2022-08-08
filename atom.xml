@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>GrailCloud</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-02-27T11:02:18.000Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>YoRHaCHQ</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML学习笔记</title>
+    <link href="http://example.com/2022/02/27/HTMLNotes/"/>
+    <id>http://example.com/2022/02/27/HTMLNotes/</id>
+    <published>2022-02-27T07:56:06.000Z</published>
+    <updated>2022-02-27T11:02:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>　　HTML（ <em>Hyper Text Markup Language</em> ），超文本标记语言。它包括一系列标签，通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。它是构成Web页面（Page）的基础。</p><p>　　万维网（world wide web，简称www）上的一个超媒体文档称之为一个页面（Page）。作为一个组织或者个人在万维网上放置开始点的页面称为主页（Homepage）或首页，主页中通常包括有指向其他相关页面或其他节点的指针（超级链接），所谓超级链接，就是一种统一资源定位器（Uniform Resource Locator，URL）指针，通过激活（Click）它，可使浏览器方便地获取新的网页。这也是HTML获得广泛应用的最重要的原因之一。在逻辑上将视为一个整体的一系列页面的有机集合称为网站（Website或Site）。超文本标记语言（HTML）是为“网页创建和其它可在网页浏览器中看到的信息”设计的一种标记语言。</p><p>　　超文本标记语言是标准通用标记语言下的一个应用，也是一种规范，一种标准，它通过标记符号来标记要显示的网页中的各个部分。网页文件本身是一种文本文件，通过在文本文件中添加标记符，可以告诉浏览器如何显示其中的内容（如：文字如何处理，画面如何安排，图片如何显示等）。浏览器按顺序阅读网页文件，然后根据标记符解释和显示其标记的内容，对书写出错的标记将不指出其错误，且不停止其解释执行过程，编制者只能通过显示效果来分析出错原因和出错部位。但需要注意的是，对于不同的浏览器，对同一标记符可能会有不完全相同的解释，因而可能会有不同的显示效果。</p><hr align="center"  noshade color="beige" size=3px><h1 id="HTML文档结构"><a href="#HTML文档结构" class="headerlink" title="HTML文档结构"></a>HTML文档结构</h1><p>　　<code>&lt;html&gt; </code>与 <code>&lt;/html&gt;</code> 标签限定了文档的开始点和结束点，在它们之间是文档的<strong>头部</strong>和<strong>主体</strong>。在头部内容里可以定义标题、样式等，文档的主体内容就是要显示的信息。</p><p>　　一个简单的HTML文档，包含尽可能少的必需的标签：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>文档的标题<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>一级标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><br>    文档的内容...<br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure><hr align="center"  noshade color="beige" size=3px><h1 id="HTML-lt-DOCTYPE-gt-声明"><a href="#HTML-lt-DOCTYPE-gt-声明" class="headerlink" title="HTML &lt;!DOCTYPE&gt; 声明"></a>HTML <code>&lt;!DOCTYPE&gt; </code>声明</h1><p><code>&lt;!DOCTYPE&gt;</code>声明位于文档中的最前面的位置，处于 <code>&lt;html&gt;</code> 标签之前。</p><p><code>&lt;!DOCTYPE&gt;</code> 声明不是一个 HTML 标签；它是用来告知 Web 浏览器页面使用了哪种 HTML 版本。</p><p>在 HTML 4.01 中，<code>&lt;!DOCTYPE&gt;</code> 声明需引用 DTD （文档类型声明），因为 HTML 4.01 是基于 SGML （<em>Standard Generalized Markup Language</em> 标准通用标记语言）。DTD 指定了标记语言的规则，确保了浏览器能够正确的渲染内容。</p><p>HTML5 不是基于 SGML，因此不要求引用 DTD。</p><p><strong>提示：</strong></p><ul><li><p>总是给您的 HTML 文档添加 <code>&lt;!DOCTYPE&gt;</code> 声明，确保浏览器能够预先知道文档类型。</p></li><li><p><code>&lt;!DOCTYPE&gt;</code> 标签没有结束标签。</p></li><li><p><code>&lt;!DOCTYPE&gt;</code> 声明不区分大小写。</p></li></ul><hr align="center"  noshade color="beige" size=3px><h1 id="HTML-lt-meta-gt-标签"><a href="#HTML-lt-meta-gt-标签" class="headerlink" title="HTML &lt;meta&gt; 标签"></a>HTML <code>&lt;meta&gt; </code>标签</h1><h2 id="HTML-lt-meta-gt-charset-属性"><a href="#HTML-lt-meta-gt-charset-属性" class="headerlink" title="HTML &lt;meta&gt; charset 属性"></a>HTML <code>&lt;meta&gt; </code>charset 属性</h2><p>　　charset 属性规定 HTML 文档的字符编码。语法：<code>&lt;meta charset=&quot;character_set&quot;&gt;</code></p><p>　　<em>character_set</em> 常用的值：</p><ul><li><p>UTF-8 - Unicode 字符编码</p></li><li><p>ISO-8859-1 - 拉丁字母表的字符编码</p></li></ul><hr align="center"  noshade color="beige" size=3px><h1 id="HTML-lt-head-gt-标签"><a href="#HTML-lt-head-gt-标签" class="headerlink" title="HTML &lt;head&gt; 标签"></a>HTML <code>&lt;head&gt; </code>标签</h1><p><code>&lt;head&gt; </code>元素是所有头部元素的容器。</p><p><code>&lt;head&gt; </code>元素必须包含文档的标题（title），可以包含脚本、样式、meta 信息 以及其他更多的信息。</p><p>以下列出的元素能被用在<code>&lt;head&gt;</code>元素内部：</p><ul><li><p><code>&lt;title&gt;</code>（在头部中，这个元素是必需的）</p></li><li><p><code>&lt;style&gt;</code></p></li><li><p><code>&lt;base&gt;</code></p></li><li><p><code>&lt;link&gt;</code></p></li><li><p><code>&lt;meta&gt;</code></p></li><li><p><code>&lt;script&gt;</code></p></li><li><p><code>&lt;noscript&gt;</code></p></li></ul><hr align="center"  noshade color="beige" size=3px><h1 id="HTML-lt-body-gt-标签"><a href="#HTML-lt-body-gt-标签" class="headerlink" title="HTML &lt;body&gt; 标签"></a>HTML <code>&lt;body&gt; </code>标签</h1><p><code>&lt;body&gt;</code> 标签定义文档的主体。</p><p><code>&lt;body&gt;</code>元素包含文档的所有内容（比如文本、超链接、图像、表格和列表等等）。</p><table><thead><tr><th align="left">属性</th><th align="left">值</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left"><a href="https://www.runoob.com/tags/att-body-alink.html">alink</a></td><td align="left"><em>color</em></td><td align="left">HTML5 不支持。 HTML 4.01 已废弃。 规定文档中活动链接的颜色。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/att-body-background.html">background</a></td><td align="left"><em>URL</em></td><td align="left">HTML5 不支持。 HTML 4.01 已废弃。 规定文档的背景图像。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/att-body-bgcolor.html">bgcolor</a></td><td align="left"><em>color</em></td><td align="left">HTML5 不支持。 HTML 4.01 已废弃。规定文档的背景颜色。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/att-body-link.html">link</a></td><td align="left"><em>color</em></td><td align="left">HTML5 不支持。 HTML 4.01 已废弃。规定文档中未访问链接的颜色。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/att-body-text.html">text</a></td><td align="left"><em>color</em></td><td align="left">HTML5 不支持。 HTML 4.01 已废弃。规定文档中所有文本的颜色。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/att-body-vlink.html">vlink</a></td><td align="left"><em>color</em></td><td align="left">HTML5 不支持。 HTML 4.01 已废弃。规定文档中已被访问链接的颜色。</td></tr></tbody></table><p></p><hr align="center"  noshade color="beige" size=3px><h1 id="HTML-lt-h1-gt-lt-h6-gt-标签"><a href="#HTML-lt-h1-gt-lt-h6-gt-标签" class="headerlink" title="HTML &lt;h1&gt; - &lt;h6&gt; 标签"></a>HTML <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> 标签</h1><p>六个不同的 HTML 标题：</p><h1>这是标题 1</h1> <h2>这是标题 2</h2> <h3>这是标题 3</h3> <h4>这是标题 4</h4> <h5>这是标题 5</h5> <h6>这是标题 6</h6><p><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> 标签被用来定义 HTML 标题。</p><p><code>&lt;h1&gt;</code> 定义重要等级最高的标题。<code>&lt;h6&gt;</code> 定义重要等级最低的标题。</p><table><thead><tr><th align="left">属性</th><th align="left">值</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left"><a href="https://www.runoob.com/tags/att-hn-align.html">align</a></td><td align="left">left center right justify</td><td align="left">HTML5 不支持。HTML 4.01 已废弃。 规定标题中文本的排列。</td></tr></tbody></table><p><strong>HTML5 不支持 <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> align 属性。请使用 CSS 代替。</strong></p><hr align="center"  noshade color="beige" size=3px><h1 id="HTML-lt-hr-gt-标签"><a href="#HTML-lt-hr-gt-标签" class="headerlink" title="HTML &lt;hr&gt; 标签"></a>HTML <code>&lt;hr&gt;</code> 标签</h1><p><code>&lt;hr&gt;</code> 标签定义 HTML 页面中的主题变化（比如话题的转移），并显示为一条水平线。</p><p><code>&lt;hr&gt;</code> 元素被用来分隔 HTML 页面中的内容（或者定义一个变化）。</p><table><thead><tr><th align="left">属性</th><th align="left">值</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left"><a href="https://www.runoob.com/tags/att-hr-align.html">align</a></td><td align="left"><em>left</em> center right</td><td align="left">HTML5 不支持。HTML 4.01 已废弃。 规定 <code>&lt;hr&gt;</code> 元素的对齐方式</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/att-hr-noshade.html">noshade</a></td><td align="left"><em>noshade</em></td><td align="left">HTML5 不支持。HTML 4.01 已废弃。 规定 <code>&lt;hr&gt;</code> 元素的颜色呈现为纯色。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/att-hr-size.html">size</a></td><td align="left"><em>pixels</em></td><td align="left">HTML5 不支持。HTML 4.01 已废弃。 规定 <code>&lt;hr&gt;</code> 元素的高度。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/att-hr-width.html">width</a></td><td align="left"><em>pixels %</em></td><td align="left">HTML5 不支持。HTML 4.01 已废弃。 规定 <code>&lt;hr&gt;</code> 元素的宽度。</td></tr></tbody></table><p></p><hr align="center"  noshade color="beige" size=3px><h1 id="HTML-lt-gt-注释标签"><a href="#HTML-lt-gt-注释标签" class="headerlink" title="HTML &lt;!--...--&gt; 注释标签"></a>HTML <code>&lt;!--...--&gt;</code> 注释标签</h1><p><code>&lt;!--...--&gt;</code> 注释标签用来在源文档中插入注释。注释不会在浏览器中显示。</p><hr align="center"  noshade color="beige" size=3px><h1 id="HTML-字符实体"><a href="#HTML-字符实体" class="headerlink" title="HTML 字符实体"></a>HTML 字符实体</h1><p>HTML 中的预留字符必须被替换为字符实体。</p><p>如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（<em>character entities</em>）。</p><p><strong>不间断空格（non-breaking space）</strong></p><p>HTML 中的常用字符实体是不间断空格(&amp;nbsp;)。</p><p>浏览器总是会截短 HTML 页面中的空格。如果您在文本中写 10 个空格，在显示该页面之前，浏览器会删除它们中的 9 个。如需在页面中增加空格的数量，您需要使用 &amp;nbsp; 字符实体。</p><p><strong>HTML 中有用的字符实体</strong></p><p><strong>注释：</strong>实体名称对大小写敏感！</p><table><thead><tr><th align="left">显示结果</th><th align="left">描述</th><th align="left">实体名称</th><th align="left">实体编号</th></tr></thead><tbody><tr><td align="left"></td><td align="left">空格</td><td align="left">&amp;nbsp;</td><td align="left">&amp;#160;</td></tr><tr><td align="left">&lt;</td><td align="left">小于号</td><td align="left">&lt;</td><td align="left">&amp;#60;</td></tr><tr><td align="left">&gt;</td><td align="left">大于号</td><td align="left">&gt;</td><td align="left">&amp;#62;</td></tr><tr><td align="left">&amp;</td><td align="left">和号</td><td align="left">&amp;</td><td align="left">&amp;#38;</td></tr><tr><td align="left">“</td><td align="left">引号</td><td align="left">&quot;</td><td align="left">&amp;#34;</td></tr><tr><td align="left">‘</td><td align="left">撇号</td><td align="left">&amp;apos; (IE不支持)</td><td align="left">&#39;</td></tr><tr><td align="left">￠</td><td align="left">分（cent）</td><td align="left">&amp;cent;</td><td align="left">&amp;#162;</td></tr><tr><td align="left">£</td><td align="left">镑（pound）</td><td align="left">&amp;pound;</td><td align="left">&amp;#163;</td></tr><tr><td align="left">¥</td><td align="left">元（yen）</td><td align="left">&amp;yen;</td><td align="left">&amp;#165;</td></tr><tr><td align="left">€</td><td align="left">欧元（euro）</td><td align="left">&amp;euro;</td><td align="left">&amp;#8364;</td></tr><tr><td align="left">§</td><td align="left">小节</td><td align="left">&amp;sect;</td><td align="left">&amp;#167;</td></tr><tr><td align="left">©</td><td align="left">版权（copyright）</td><td align="left">&amp;copy;</td><td align="left">&amp;#169;</td></tr><tr><td align="left">®</td><td align="left">注册商标</td><td align="left">&amp;reg;</td><td align="left">&amp;#174;</td></tr><tr><td align="left">™</td><td align="left">商标</td><td align="left">&amp;trade;</td><td align="left">&amp;#8482;</td></tr><tr><td align="left">×</td><td align="left">乘号</td><td align="left">&amp;times;</td><td align="left">&amp;#215;</td></tr><tr><td align="left">÷</td><td align="left">除号</td><td align="left">&amp;divide;</td><td align="left">&amp;#247;</td></tr></tbody></table><p></p><hr align="center"  noshade color="beige" size=3px><h1 id="HTML文本格式"><a href="#HTML文本格式" class="headerlink" title="HTML文本格式"></a>HTML文本格式</h1><table><thead><tr><th align="left">标签</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left"><a href="https://www.runoob.com/tags/tag-acronym.html"><code>&lt;acronym&gt;</code></a></td><td align="left">HTML5不再支持。 定义只取首字母的缩写。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-abbr.html"><code>&lt;abbr&gt;</code></a></td><td align="left">定义一个缩写。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-address.html"><code>&lt;address&gt;</code></a></td><td align="left">定义文档作者或拥有者的联系信息。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-b.html"><code>&lt;b&gt;</code></a></td><td align="left">定义粗体文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-bdo.html"><code>&lt;bdo&gt;</code></a></td><td align="left">定义文本的方向。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-big.html"><code>&lt;big&gt;</code></a></td><td align="left">HTML5不再支持。 定义大号文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-blockquote.html"><code>&lt;blockquote&gt;</code></a></td><td align="left">定义块引用。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-center.html"><code>&lt;center&gt;</code></a></td><td align="left">HTML5不再支持。 HTML 4.01 已废弃。定义居中文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-cite.html"><code>&lt;cite&gt;</code></a></td><td align="left">定义引用(citation)。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-code.html"><code>&lt;code&gt;</code></a></td><td align="left">定义计算机代码文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-del.html"><code>&lt;del&gt;</code></a></td><td align="left">定义被删除文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-em.html"><code>&lt;em&gt;</code></a></td><td align="left">定义强调文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-font.html"><code>&lt;font&gt;</code></a></td><td align="left">HTML5不再支持。 HTML 4.01 已废弃。 定义文本的字体、尺寸和颜色</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-i.html"><code>&lt;i&gt;</code></a></td><td align="left">定义斜体文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-ins.html"><code>&lt;ins&gt;</code></a></td><td align="left">定义被插入文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-kbd.html"><code>&lt;kbd&gt;</code></a></td><td align="left">定义键盘文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-mark.html"><code>&lt;mark&gt;</code></a></td><td align="left">定义带有记号的文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-meter.html"><code>&lt;meter&gt;</code></a></td><td align="left">定义度量衡。仅用于已知最大和最小值的度量。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-pre.html"><code>&lt;pre&gt;</code></a></td><td align="left">定义预格式文本</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-progress.html"><code>&lt;progress&gt;</code></a></td><td align="left">定义运行中的任务进度（进程）。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-q.html"><code>&lt;q&gt;</code></a></td><td align="left">定义短的引用。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-rt.html"><code>&lt;rt&gt;</code></a></td><td align="left">定义字符（中文注音或字符）的解释或发音。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-ruby.html"><code>&lt;ruby&gt;</code></a></td><td align="left">定义 ruby 注释（中文注音或字符）。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-s.html"><code>&lt;s&gt;</code></a></td><td align="left">定义加删除线的文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-samp.html"><code>&lt;samp&gt;</code></a></td><td align="left">定义计算机代码样本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-small.html"><code>&lt;small&gt;</code></a></td><td align="left">定义小号文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-strong.html"><code>&lt;strong&gt;</code></a></td><td align="left">定义语气更为强烈的强调文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-sub.html"><code>&lt;sub&gt;</code></a></td><td align="left">定义下标文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-sup.html"><code>&lt;sup&gt;</code></a></td><td align="left">定义上标文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-time.html"><code>&lt;time&gt;</code></a></td><td align="left">定义一个日期&#x2F;时间</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-u.html"><code>&lt;u&gt;</code></a></td><td align="left">定义下划线文本。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-var.html"><code>&lt;var&gt;</code></a></td><td align="left">定义文本的变量部分。</td></tr><tr><td align="left"><a href="https://www.runoob.com/tags/tag-wbr.html"><code>&lt;wbr&gt;</code></a></td><td align="left">规定在文本中的何处适合添加换行符。</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;　　HTML（ &lt;em&gt;Hyper Text Markup Language&lt;/em&gt; ），超文本标记语言。它包括一系列标签，通过这些标签可</summary>
+      
+    
+    
+    
+    <category term="Study" scheme="http://example.com/categories/Study/"/>
+    
+    <category term="HTML" scheme="http://example.com/categories/Study/HTML/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+    <category term="Web" scheme="http://example.com/tags/Web/"/>
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JDK&amp;IDEA</title>
+    <link href="http://example.com/2022/02/22/startJava/"/>
+    <id>http://example.com/2022/02/22/startJava/</id>
+    <published>2022-02-22T12:06:13.000Z</published>
+    <updated>2022-02-22T14:41:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于JDK"><a href="#关于JDK" class="headerlink" title="关于JDK"></a>关于JDK</h1><p>　　JDK(Java Development Kit)，Java开发工具包，由Sun公司提供。其中包含了JRE(Java Runtime Environment)，Java运行环境。为便于教材学习跟进，这里选择与教材相同的JDK8(<a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">Java SE Development Kit 8u321</a>)。若只使用JDK，不使用IDE，还应配置PATH环境变量。</p><div class="mermaid">    graph LR        A[JDK]---B[开发工具]        A---C[JRE]        C---Java基础类库        C---JVM</div><h1 id="关于IDEA"><a href="#关于IDEA" class="headerlink" title="关于IDEA"></a>关于IDEA</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>　　IntelliJ IDEA，Java IDE之一，JetBrains公司的产品。旗舰版(Ultimate)收费，提供30天免费试用。社区版(Community)免费。当前最新版本为 <code>2021.3.2</code><a href="https://www.jetbrains.com/idea/download/">(官网下载)</a>，本文后续的<code>Ultimate</code>版本激活破解也仅针对<code>2021.3.2</code>。</p><h2 id="旗舰版-Ultimate-激活破解"><a href="#旗舰版-Ultimate-激活破解" class="headerlink" title="旗舰版(Ultimate)激活破解"></a>旗舰版(Ultimate)激活破解</h2><p>　　<strong>注意：社区版(Community)无需破解，本就开源，此处为旗舰版(Ultimate)激活破解，仅供个人学习使用。</strong></p><p>　　请先前往<a href="https://www.jetbrains.com/idea/download/">官网</a>下载并安装好旗舰版(Ultimate)，再执行后续步骤。</p><h3 id="第一步：下载激活脚本"><a href="#第一步：下载激活脚本" class="headerlink" title="第一步：下载激活脚本"></a>第一步：下载激活脚本</h3><p>　　链接：<a href="https://pan.baidu.com/s/1LSVwWIk65rwMGYOaE8jfHg">https://pan.baidu.com/s/1LSVwWIk65rwMGYOaE8jfHg</a><br>　　提取码：fkrs</p><p>　　先通过网盘下载好激活补丁，打开文件夹如下：</p><center><img src="https://pic.imgdb.cn/item/6214e8f72ab3f51d91996bff.jpg"></center><ul><li><p><code>scripts</code>:放置了相关脚本，包含自动安装、卸载破解补丁脚本（Windows、Mac、Linux 对应系统的脚本都有）；</p></li><li><p><code>vmoptions</code>:放置了 JetBrains 产品的 idea.vmoptions 配置文件。之前版本都是通过在这个文件中手动引入破解补丁，但是最新版本 IDEA 2021.3.2 官方加入了反制手段，在用户目录下已经找不到这个文件了，新版本我们直接引用这个文件夹下的 idea.vmoptions 配置文件；</p></li></ul><h3 id="第二步：运行激活脚本"><a href="#第二步：运行激活脚本" class="headerlink" title="第二步：运行激活脚本"></a>第二步：运行激活脚本</h3><p>　　将 <code>ja-netfilter-all</code>　激活文件夹移动到电脑上某个位置，请一直固定置于你选择的路径下，路径变更将导致激活破解失效。<br>　　<center><img src="https://pic.imgdb.cn/item/6214e8fc2ab3f51d91997a60.jpg"></center></p><p>　　Windows 系统，运行 <code>install-current-user.vbs</code> 脚本，为当前用户安装破解补丁。</p><p>　　Mac&#x2F;Linux 系统，运行 <code>install.sh</code> 脚本安装。</p><p>　　点击安装，会弹出如下提示：</p><p>　<center><img src="https://pic.imgdb.cn/item/6214e8fc2ab3f51d91997a69.jpg"></center></p><p>　　告诉我们，运行此补丁大约花费几秒钟，点击 确定，等待 Done 完成提示框出现，到这里，表示补丁安装成功。</p><p>　<center><img src="https://pic.imgdb.cn/item/6214e8fc2ab3f51d91997a74.jpg"></center></p><p><strong>注意：运行此脚本因为需要添加 <code>idea.vmoptions</code> 文件的环境变量，可能会被杀毒软件误报为木马，大家允许运行即可。</strong></p><h3 id="第三步：打开-IDEA-填入指定激活码完成激活"><a href="#第三步：打开-IDEA-填入指定激活码完成激活" class="headerlink" title="第三步：打开 IDEA, 填入指定激活码完成激活"></a>第三步：打开 IDEA, 填入指定激活码完成激活</h3><p>　　运行脚本安装破解补丁完成后，<strong>一定要重启 IDEA</strong>，然后，填入下面的激活码，点击激活即可。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">4W9NP3KV9E-<br>eyJsaWNlbnNlSWQiOiI0VzlOUDNLVjlFIiwibGljZW5zZWVOYW1lIjoic2NyaXAgd2FuZSIsImFzc2lnbmVlTm<br>FtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiIiLCJjaGVja0NvbmN1cnJl<br>bnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IklJIiwiZmFsbGJhY2tEYXRlIjoiMjAyMy0wMS0yNC<br>IsInBhaWRVcFRvIjoiMjAyMy0wMS0yNCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUERCIiwiZmFsbGJh<br>Y2tEYXRlIjoiMjAyMy0wMS0yNCIsInBhaWRVcFRvIjoiMjAyMy0wMS0yNCIsImV4dGVuZGVkIjp0cnVlfSx7Im<br>NvZGUiOiJQV1MiLCJmYWxsYmFja0RhdGUiOiIyMDIzLTAxLTI0IiwicGFpZFVwVG8iOiIyMDIzLTAxLTI0Iiwi<br>ZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBHTyIsImZhbGxiYWNrRGF0ZSI6IjIwMjMtMDEtMjQiLCJwYWlkVX<br>BUbyI6IjIwMjMtMDEtMjQiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFBTIiwiZmFsbGJhY2tEYXRlIjoi<br>MjAyMy0wMS0yNCIsInBhaWRVcFRvIjoiMjAyMy0wMS0yNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQU<br>EMiLCJmYWxsYmFja0RhdGUiOiIyMDIzLTAxLTI0IiwicGFpZFVwVG8iOiIyMDIzLTAxLTI0IiwiZXh0ZW5kZWQi<br>OnRydWV9LHsiY29kZSI6IlBSQiIsImZhbGxiYWNrRGF0ZSI6IjIwMjMtMDEtMjQiLCJwYWlkVXBUbyI6IjIwM<br>jMtMDEtMjQiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFNXIiwiZmFsbGJhY2tEYXRlIjoiMjAyMy0wMS<br>0yNCIsInBhaWRVcFRvIjoiMjAyMy0wMS0yNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQU0kiLCJmYWx<br>sYmFja0RhdGUiOiIyMDIzLTAxLTI0IiwicGFpZFVwVG8iOiIyMDIzLTAxLTI0IiwiZXh0ZW5kZWQiOnRydWV9<br>LHsiY29kZSI6IlBDV01QIiwiZmFsbGJhY2tEYXRlIjoiMjAyMy0wMS0yNCIsInBhaWRVcFRvIjoiMjAyMy0wM<br>S0yNCIsImV4dGVuZGVkIjp0cnVlfV0sIm1ldGFkYXRhIjoiMDEyMDIyMDEyMVBTQU4wMDAwMDUiLCJoYXNoIj<br>oiVFJJQUw6LTYyNTA2MDI4NyIsImdyYWNlUGVyaW9kRGF5cyI6NywiYXV0b1Byb2xvbmdhdGVkIjpmYWxzZSw<br>iaXNBdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlfQ==-<br>WlwI3NBiapY7em4MmP7qdZcTK2wvAt5f7FNwaH65H6SBvWnFGpe8M2VrSWCEBIGFQpv+VFJLghJKLjaRUcVOY<br>6ttC6G4uKTpuPzELgcckez+/9DPrYj+alvLYFpS6UWy4uqzsjC/sHgcbNiCQjZQMVhj8Wflv9ts8SfWUqTwtc<br>iG8eBrzbyipXOVrRn5Wpk3l6ifL71HZsMy3bDLU8Lkt3UQBNVFZhXWBcNyY/WB9CQGX+6aXtbFA9p/hjbTZL0<br>50UoeM30rz0UkzPmfiIupbb3KNPKPArQkU8gw6pF7AcRSLuU3HNqq8RDbrXDYSXY9vtoD3Oi18ijlagVANrhj<br>pQ==-<br>MIIETDCCAjSgAwIBAgIBDTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIwM<br>TAxOTA5MDU1M1oXDTIyMTAyMTA5MDU1M1owHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMDEwMTkwggEiMA<br>0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCUlaUFc1wf+CfY9wzFWEL2euKQ5nswqb57V8QZG7d7RoR6rwY<br>UIXseTOAFq210oMEe++LCjzKDuqwDfsyhgDNTgZBPAaC4vUU2oy+XR+Fq8nBixWIsH668HeOnRK6RRhsr0rJz<br>RB95aZ3EAPzBuQ2qPaNGm17pAX0Rd6MPRgjp75IWwI9eA6aMEdPQEVN7uyOtM5zSsjoj79Lbu1fjShOnQZuJc<br>sV8tqnayeFkNzv2LTOlofU/Tbx502Ro073gGjoeRzNvrynAP03pL486P3KCAyiNPhDs2z8/COMrxRlZW5mfzo<br>0xsK0dQGNH3UoG/9RVwHG4eS8LFpMTR9oetHZBAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQUJNo<br>RIpb1hUHAk0foMSNM9MCEAv8wSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNV<br>BAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwD<br>QYJKoZIhvcNAQELBQADggIBAB2J1ysRudbkqmkUFK8xqhiZaYPd30TlmCmSAaGJ0eBpvkVeqA2jGYhAQRqFiA<br>lFC63JKvWvRZO1iRuWCEfUMkdqQ9VQPXziE/BlsOIgrL6RlJfuFcEZ8TK3syIfIGQZNCxYhLLUuet2HE6LJYP<br>Q5c0jH4kDooRpcVZ4rBxNwddpctUO2te9UU5/FjhioZQsPvd92qOTsV+8Cyl2fvNhNKD1Uu9ff5AkVIQn4JU2<br>3ozdB/R5oUlebwaTE6WZNBs+TA/qPj+5/we9NH71WRB0hqUoLI2AKKyiPw++FtN4Su1vsdDlrAzDj9ILjpjJK<br>A1ImuVcG329/WTYIKysZ1CWK3zATg9BeCUPAV1pQy8ToXOq+RSYen6winZ2OO93eyHv2Iw5kbn1dqfBw1BuTE<br>29V2FJKicJSu8iEOpfoafwJISXmz1wnnWL3V/0NxTulfWsXugOoLfv0ZIBP1xH9kmf22jjQ2JiHhQZP7ZDsre<br>RrOeIQ/c4yR8IQvMLfC0WKQqrHu5ZzXTH4NO3CwGWSlTY74kE91zXB5mwWAx1jig+UXYc2w4RkVhy0//lOmVy<br>a/PEepuuTTI4+UJwC7qbVlh5zfhj8oTNUXgN0AOc+Q0/WFPl1aw5VV/VrO8FCoB15lFVlpKaQ1Yh+DVU8ke+r<br>t9Th0BCHXe0uZOEmH0nOnH/0onD<br></code></pre></td></tr></table></figure><p>　　复制激活码后填入，点击 <code>Activate</code> 按钮完成激活：<br>　<center><img src="https://pic.imgdb.cn/item/6214ef592ab3f51d91abf828.jpg"></center></p><blockquote><p>如果重启 IDEA 填入激活码依然无法激活，不妨重启下系统。</p></blockquote><p>　　点击激活后，就可以看到激活到 2099 年了：<br>　<center><img src="https://pic.imgdb.cn/item/6214f2532ab3f51d91b4a3d4.png"></center>　</p><center><font color=red><b>注意：激活成功后，请勿升级IDEA版本，可在设置中自行关闭</font></b></center>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;关于JDK&quot;&gt;&lt;a href=&quot;#关于JDK&quot; class=&quot;headerlink&quot; title=&quot;关于JDK&quot;&gt;&lt;/a&gt;关于JDK&lt;/h1&gt;&lt;p&gt;　　JDK(Java Development Kit)，Java开发工具包，由Sun公司提供。其中包含了JRE(Ja</summary>
+      
+    
+    
+    
+    <category term="Study" scheme="http://example.com/categories/Study/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+    <category term="JDK" scheme="http://example.com/tags/JDK/"/>
+    
+    <category term="IDEA" scheme="http://example.com/tags/IDEA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图床测试</title>
+    <link href="http://example.com/2022/02/12/imgHost/"/>
+    <id>http://example.com/2022/02/12/imgHost/</id>
+    <published>2022-02-12T04:38:19.000Z</published>
+    <updated>2022-02-14T11:14:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>　　由于<code>Github</code> 国内访问速率感人及容量问题，即日起本站使用 <del><code>sm.ms</code></del> <code>聚合图床</code>，站内部分较大媒体资源将被置于 <del><code>sm.ms</code></del> <code>聚合图床</code>上，以优化访问速率。<del>该图床会对文件进行一定压缩，故图种等形式目前在 sm.ms上是不可行的。</del>在<code>聚合图床</code>上超过3MB大小的图片将会被压缩，而不超过的则会“原图”保存。经测试，若要使用图种等形式，在3MB以下是能够复原的。以下是测试部分，仅第一张为图种，其他均为普通图片。（<code>()</code>中标注的为原图及超限后压缩图片的大小）</p><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="图种-1-76MB"><a href="#图种-1-76MB" class="headerlink" title="图种(1.76MB)"></a>图种(1.76MB)</h2><p>　　　考虑到现在是2022年，还是简要说明一下“图种”吧。</p><blockquote><p>　　图种即一种采用特殊方式将图片文件与压缩文件结合起来的文件。该文件一般外观上为图片文件，可以正常预览图片；将该图片下载到本地后，可以通过修改文件的后缀名（如将.jpg改为.zip）并使用压缩软件对其解压缩，获取隐藏在图片文件中的压缩文件。</p></blockquote><p></p><center><img src="https://pic.imgdb.cn/item/6207e3f12ab3f51d91e59d31.jpg"></img></center><p></p><center>将上图右键"图片另存为"下载到本地并修改后缀名为".zip"，解压后就能看到内容了哦😉</center><h2 id="FGO-923-11KB"><a href="#FGO-923-11KB" class="headerlink" title="FGO(923.11KB)"></a>FGO(923.11KB)</h2><p></p><center><img src="https://pic.imgdb.cn/item/6207de3e2ab3f51d91dfd895.jpg"></img></center><p></p><h2 id="Texas-1-1-13MB"><a href="#Texas-1-1-13MB" class="headerlink" title="Texas_1(1.13MB)"></a>Texas_1(1.13MB)</h2><p></p><center><img src="https://pic.imgdb.cn/item/6207dbd22ab3f51d91dd6744.jpg"></img></center><p></p><h2 id="Texas-2-3-29MB-gt-484KB"><a href="#Texas-2-3-29MB-gt-484KB" class="headerlink" title="Texas_2(3.29MB-&gt;484KB)"></a>Texas_2(3.29MB-&gt;484KB)</h2><p></p><center><img src="https://pic.imgdb.cn/item/6207dbd22ab3f51d91dd674d.jpg"></img></center><p></p><h2 id="OceanCat-2-37MB"><a href="#OceanCat-2-37MB" class="headerlink" title="OceanCat(2.37MB)"></a>OceanCat(2.37MB)</h2><p></p><center><img src="https://pic.imgdb.cn/item/6207dbd22ab3f51d91dd6739.jpg"></img></center><p></p><h2 id="Dusk-4-57MB-gt-404KB"><a href="#Dusk-4-57MB-gt-404KB" class="headerlink" title="Dusk(4.57MB-&gt;404KB)"></a>Dusk(4.57MB-&gt;404KB)</h2><p></p><center><img src="https://pic.imgdb.cn/item/6207dbd22ab3f51d91dd6760.jpg"></img></center><p></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h1&gt;&lt;p&gt;　　由于&lt;code&gt;Github&lt;/code&gt; 国内访问速率感人及容量问题，即日起本站使用 &lt;del&gt;&lt;code&gt;sm.ms&lt;/code&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="Test" scheme="http://example.com/categories/Test/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于Web前端密码加密的有趣讨论</title>
+    <link href="http://example.com/2022/02/11/share_WFPE/"/>
+    <id>http://example.com/2022/02/11/share_WFPE/</id>
+    <published>2022-02-11T12:40:52.000Z</published>
+    <updated>2022-02-11T13:17:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>　　「<a href="https://www.zhihu.com/question/25539382">知乎-Web 前端密码加密是否有意义？</a>」这是在给网站增加文章加密，学习相关内容时，在知乎上看到的一个有趣问题。</p><p></p><center>关于现代密码学的一些“反常识”结论</center><p></p><ol><li>A可以向B证明自己拥有一个密码，但是如果B是假冒的验证者，A不会透露关于密码的任何信息给B。——“零知识证明”<p></p></li><li>A可以和B比较自己持有的一个值的大小关系，而不泄露这个值给对方。——“百万富翁问题”<p></p></li><li>A可以给B发来的一段信息进行电子签名，而不知道信息的内容。——“盲签名”<p></p></li><li>A和B可以，在没有公正第三人的情况下，进行等概率胜负的博弈。——“电子博弈”<p></p></li><li>邮件服务，如果不考虑法律风险的话，是可以做到让服务器看不到你的邮件内容的。——PGP<p></p></li><li>破解4096位RSA是困难的。——即使用超算也如此。<p></p></li><li>破解256位AES是困难的。——即使用量子计算也如此。<p></p></li><li>破解OTP系统是 <del>困难</del> 不可能的。——即使天顶星人来了也如此。<p></p></li><li>一个好的加密算法应该是公开的——它可以接受更多人的检验。<p></p></li><li>一个好的密码系统不一定是公开的——但是它应该按照可以公开除了密码之外的一切而依旧安全来设计。<p></p></li><li>可以实现这样的算法，使得班干部中的任何一个均可以以班委会的名义下达通知，且其他人，除了班长之外，都不知道具体下达者。<p></p></li><li>密码系统的安全性取决于最弱的一环……当年是谁说的“只用https保护登录界面就够了”的来着…你的token也会被盗<p></p></li><li>大多数密码系统都不是被正面攻破的…而是实现过程中出了差错…<p></p></li><li>以上内容，在大多数的密码学教材上都能找到——甚至还有用到的一些算法安全性的数学证明…</li></ol><p></p><center>Dedicated to Alice and Bob</center><p></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;　　「&lt;a href=&quot;https://www.zhihu.com/question/25539382&quot;&gt;知乎-Web 前端密码加密是否有意义？&lt;/a&gt;」这是在给网站增加文章加密，学习相关内容时，在知乎上看到的一个有趣问题。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;关于现代密</summary>
+      
+    
+    
+    
+    <category term="Study" scheme="http://example.com/categories/Study/"/>
+    
+    
+    <category term="Web" scheme="http://example.com/tags/Web/"/>
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="加密" scheme="http://example.com/tags/%E5%8A%A0%E5%AF%86/"/>
+    
+    <category term="密码学" scheme="http://example.com/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>加密测试</title>
+    <link href="http://example.com/2022/02/10/encrypt/"/>
+    <id>http://example.com/2022/02/10/encrypt/</id>
+    <published>2022-02-10T09:48:30.000Z</published>
+    <updated>2022-02-10T12:53:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="Oh, these decrypted content cannot be verified, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="95a7f9ee9209bedf4b94c4327aef764e33fc20b5e558536bc6e31e64b4055191">c84833f99eb9df9a3e5343aca5167098ebe31ef91818d28e48b695510a96177b74dec0eeec221b7c29af45079196e701d8d56bebfbff5cf0e1eaa2e3b6b72331712239ca88d7d0540cd2a590b2b9c61975899a915e263dbaa5905648e43a13bb7618bcc039017af2b5e10398a2e2387392726b68419df009242fb9615c0c3e9e1e254d198b57dc2dbb8ca0741e69f3d5d3bded3b1b514eae7c81a1a40f324723cb89cfc5853112759c60b46ffc04c46c3ae37778db60123af07d5da91002b34546a18acfe2eb848756b8669d2a8b2d8185847a535891010b7f23398f01dc17a7107b837db8358f2062061ff27b0d25fc2874c80ee33972365b5c9fa531106f6743aa92d0188387a2fdbb0a5b5b7b212eeb1a1043e4dd3f81b9717e5c50512165d9a2be357e2ef04b0cd2f666c170573ec6ec08c55fee545d379954122c5258af6b26ccdc1ade906bcf00c5ad783523e87a01c371077630213614a8e61757f004047073440d1e6b266d4abefe2a3bf27f7ce4ddd2de9bb95b3c59a3fcd6f6a257beff3a4aa9668b96454ed0168154a3c8e9b6cdc5f773bcba9c784016aea956ae79a62b547a827b7d87fd6dd367a380d379c4c9e51241939938a3d4ed05b1336651965aaea9dc395b6928a7b7d70142fbeca6147fce260f901790d3e15784bf672dcfd57cd970464eafd86faf02388b0c6e9fa962994afb6b6f0b28b9553d29b281dd17b268efd4fa99a8921d5dd4b94acc4d5cea7dd0096ebdc83949a01734b22cece4bbed6a94a8fc323b29e510a3ff2611edc1f0969e392802e7432a5df6dbc4b81620cb7f40c07d14a3db95b2ac8f55f09971545b63504b1e344572072ef7d6ae5776244350f53e0d86dcc04bff565546355f8e5a6d4ced80141c0c4c6f7ef0197d7c47d940909b58a9926d6ddccff438ce51d8340edb3dbf3c7f747fcc34fcbeb7474ea4bd550d90d02cb069c17d1a7dd899013e8d329eefee1ae3ee06f4372642c77b848dc0be5ea7e9d5edb05172cdfc7d8694465e8abb79cbb3bd2894c0aa67a2810643d4e5e82bbe03fa5f868e647bde43b1a6404c0de5fa36385cfce0d90e5cdc2434cf08e677924b37eb8d5ca3255720a6bcd5b91a0a195884cec6eef82cc2056b9f3fad8aaddc5a8dae78cdeddd1164da6431bd1f9e6519efadfdcf72bf0cbb43482642b9a89e100ad00f4f62160f74d8d714e4ce1633d416bda84c52780a8ea960e302c512a01a071a99b43a4e548e32a5d8e529c6894ed81ae1f831dcd6f7fbe96a24030ef7bc4827e294b7b243d722e1fa2f38a7070a7daac7015b08e283f9d712dbf5548202017921115cfa01638fe1f195e3708dd57e1743ab7177f83bb7ae2b16da5e4ae280763420bf63c7511097d13e65f07b3b6fbf613eeb100ef8fbacfd6dbd5b5d11241015f94eeace704611ff4afc3a25c79087e49ce03df9c783cb07b0a838713b49fdbe</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-wave">      <input class="hbe hbe-input-field hbe-input-field-wave" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-wave" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-wave">Hey, password is required here.(Password is check)</span>      </label>      <svg class="hbe hbe-graphic hbe-graphic-wave" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>      </svg>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    
+    
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+    
+    
+    
+    <category term="Test" scheme="http://example.com/categories/Test/"/>
+    
+    
+    <category term="encrypted" scheme="http://example.com/tags/encrypted/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>视频测试</title>
+    <link href="http://example.com/2022/02/09/VIDEO_TEST/"/>
+    <id>http://example.com/2022/02/09/VIDEO_TEST/</id>
+    <published>2022-02-09T12:21:18.000Z</published>
+    <updated>2022-02-09T14:37:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="bilibili"><a href="#bilibili" class="headerlink" title="bilibili"></a>bilibili</h2><iframe src="//player.bilibili.com/player.html?aid=466439627&bvid=BV1V5411o7vj&cid=504267970&page=1" align=middle width=100% height=640 scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><h2 id="YouTube"><a href="#YouTube" class="headerlink" title="YouTube"></a>YouTube</h2><p>(As it known to all, it doesn’t work if you don’t bypass the firewall.)</p><iframe width="560" height="315" src="https://www.youtube.com/embed/0LuyxzqI3Hk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;bilibili&quot;&gt;&lt;a href=&quot;#bilibili&quot; class=&quot;headerlink&quot; title=&quot;bilibili&quot;&gt;&lt;/a&gt;bilibili&lt;/h2&gt;&lt;iframe src=&quot;//player.bilibili.com/player.html?ai</summary>
+      
+    
+    
+    
+    <category term="Test" scheme="http://example.com/categories/Test/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>粉毛落地了XD</title>
+    <link href="http://example.com/2022/02/08/%E7%B2%89%E6%AF%9B%E8%90%BD%E5%9C%B0/"/>
+    <id>http://example.com/2022/02/08/%E7%B2%89%E6%AF%9B%E8%90%BD%E5%9C%B0/</id>
+    <published>2022-02-08T13:15:43.000Z</published>
+    <updated>2022-07-01T11:48:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>　　自2020.4.25晚上6点至今天2022.2.8早上11点,粉毛卫星共飞行653天、15689小时、941340分钟、56480400秒，望周知🙏</p><center><a href="https://ak.hypergryph.com/news/2022010681.html">「阴云火花」</a></center><p></p><div align="center">     <img src="https://yorchq.github.io/image/粉毛落地了XD/粉毛落地.jpg"></div><p></p><center><a href="https://yorchq.github.io/PinkHair">点击这里看「 八 澄 闪 子 」</a></center><p></p><center><a href="https://www.bilibili.com/video/BV1sR4y177qj">⚡ 粉 毛 落 地 过 猛 ⚡</center><p></p><center><a href="https://www.bilibili.com/video/BV1J5411o7ac">《 三 个 粉 毛 》</center>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;　　自2020.4.25晚上6点至今天2022.2.8早上11点,粉毛卫星共飞行653天、15689小时、941340分钟、56480400秒，望周知🙏&lt;/p&gt;
+&lt;center&gt;&lt;a href=&quot;https://ak.hypergryph.com/news/2022010</summary>
+      
+    
+    
+    
+    <category term="Games" scheme="http://example.com/categories/Games/"/>
+    
+    
+    <category term="Arknights" scheme="http://example.com/tags/Arknights/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图片测试</title>
+    <link href="http://example.com/2022/01/31/IMG_TEST/"/>
+    <id>http://example.com/2022/01/31/IMG_TEST/</id>
+    <published>2022-01-31T03:30:06.000Z</published>
+    <updated>2022-02-08T15:23:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="插入图片真的迷"><a href="#插入图片真的迷" class="headerlink" title="插入图片真的迷"></a>插入图片真的迷</h2><ol><li>这是使用<code>![img](file/img.jpg)</code>插入的<br><img src="/IMG_TEST/Holy_grail.jpg" alt="Holy_grail"> &lt;-这是图片，但它裂了</li><li>这是使用<code>![img](./file/img.jpg)</code>插入的<br><img src="/./IMG_TEST/Holy_grail.jpg" alt="Holy_grail"> &lt;-它也一样</li></ol><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>​如你所见，这两个图<strong>裂了</strong>，但在Typora上能预览🤦‍♂️</p><p>​还是改个路径统一管理吧QAQ：</p><ul><li><p>使用<code>![img](../image/file/img.jpg)</code>插入</p><p><img src="/../image/IMG_TEST/Holy_grail.jpg" alt="Holy_grail"></p><p>　　在Typora上能预览，网页上也正常显示，就好起来了🤷‍♂️</p></li></ul><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>　　  也可使用HTML书写：<code>&lt;img src=&quot;url&quot;&gt;</code></p><p>　　  若需设定图片位置，可使用以下HTML标签：　<br>　　<br>　　　　1. <code>&lt;center&gt;&lt;/center&gt;</code><br>　　　　　　　　<br>　　　　2. <code>&lt;div align=&quot;center&quot;&gt;&lt;/div&gt;</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;插入图片真的迷&quot;&gt;&lt;a href=&quot;#插入图片真的迷&quot; class=&quot;headerlink&quot; title=&quot;插入图片真的迷&quot;&gt;&lt;/a&gt;插入图片真的迷&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;这是使用&lt;code&gt;![img](file/img.jpg)&lt;/code&gt;插入的&lt;br&gt;</summary>
+      
+    
+    
+    
+    <category term="Test" scheme="http://example.com/categories/Test/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>START</title>
+    <link href="http://example.com/2022/01/30/START/"/>
+    <id>http://example.com/2022/01/30/START/</id>
+    <published>2022-01-30T15:43:24.000Z</published>
+    <updated>2022-02-08T13:04:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="创建缘由"><a href="#创建缘由" class="headerlink" title="创建缘由"></a>创建缘由</h1><p>　　START，本站的起点，得从一台闲置的笔记本说起。</p><p>　　起初是想着不把笔记本上的1T硬盘浪费了，就着手在笔记本上搭建一个服务器，做一个私有云。找了一圈看上了<a href="https://cloudreve.org/">Cloudreve</a>，便用它在本地搭建起了一个网盘系统。在局域网内多个设备上都测试通过了，速度很理想<del>(废话)</del>，准备接入公网。然后，就发现自己没有公网IP…考虑到各方面因素，打算试试内网穿透。但体验下来，发现各服务提供商的免费隧道速率感人，自己又不想在这上面掏腰包。而且毕竟作为私有云，数据通过第三方总是不那么安心，便暂时搁置了这一方案。</p><p>　　Cloudreve算是开了个头，随后就萌生了自己建站的想法。在搜集相关资料的时候，偶然看到了这样一种说法：<br>　　<img src="/../image/START/commit.png" alt="commit"></p><p>　　本着求知精神，我便循着上面的三个关键词继续进行了深入了解和学习。</p><p>　　这个站点就诞生了🥳</p><h1 id="组建方案"><a href="#组建方案" class="headerlink" title="组建方案"></a>组建方案</h1><p>　　正如上一节所说，本站搭建过程中使用了Github+CloudFlare+NameSilo，具体如下：</p><ul><li><p>Github:</p><ol><li>将GitHub Pages作为托管仓库</li><li>在GitHub上创建一个<code>OAuth Apps</code>，以供根据Github Issues开发出来的评论系统<a href="https://github.com/gitalk">Gitalk</a>使用（想出这法子的dalao是真的nice）</li></ol></li><li><p>NameSilo:<br>　域名注册商，真的实惠，手续简单，收费透明，附送WHOIS Privacy　<del>甚至非真实的WHOIS信息也能通过</del></p></li><li><p>CloudFlare:</p><ol><li>提供DNS服务　<del>比NameSilo自带的强多惹</del></li><li>使用其CDN为网站访问加速</li></ol></li><li><p>Hexo:<br>　本站使用该框架搭建</p></li></ul><h1 id="未来内容"><a href="#未来内容" class="headerlink" title="未来内容"></a>未来内容</h1><ul><li>会逐步将一些个人体验良好的工具在本站做一个汇总，方便日后使用</li><li>技术上遇到过的一些值得记录的问题，会考虑以教程形式在本站中更新记录</li><li>一时兴起之举，以后也会在这里记录一些东西，不论是技术上的还是生活中值得留念的</li><li>刚好下学期会开设“网页前端开发”这门课程，本站届时也将作为学习成果的测试应用载体</li><li>可能会接入开头提到的Cloudreve服务</li><li>暂时就这么多，不定期更新</li><li>初来乍到，多多关照😉</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;创建缘由&quot;&gt;&lt;a href=&quot;#创建缘由&quot; class=&quot;headerlink&quot; title=&quot;创建缘由&quot;&gt;&lt;/a&gt;创建缘由&lt;/h1&gt;&lt;p&gt;　　START，本站的起点，得从一台闲置的笔记本说起。&lt;/p&gt;
+&lt;p&gt;　　起初是想着不把笔记本上的1T硬盘浪费了，就着手在笔</summary>
+      
+    
+    
+    
+    <category term="Notes" scheme="http://example.com/categories/Notes/"/>
+    
+    
+    <category term="Informal Essay" scheme="http://example.com/tags/Informal-Essay/"/>
+    
+  </entry>
+  
+</feed>

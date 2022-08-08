@@ -1,0 +1,441 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>HTML学习笔记 | GrailCloud</title><script src="//unpkg.com/valine/dist/Valine.min.js"></script><link rel="stylesheet" href="/css/gitalk.css"><script src="/js/gitalk.js"></script><script src="https://unpkg.com/mermaid@8.13.5/dist/mermaid.min.js"></script><script>mermaid.initialize({
+  startOnLoad: true
+  , theme: 'dark'
+});</script><link rel="stylesheet" href="/css/arknights.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark-reasonable.min.css"><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="GrailCloud" type="application/atom+xml">
+</head><body style="background-image:url(https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg);"><header><nav><a href="/">Home</a><a href="/archives/">Archives</a><a href="/info/">Info</a><a href="/links/">Links</a></nav></header><main><article><div id="post-bg"><div id="post-title"><h1>HTML学习笔记</h1><hr></div><div id="post-content"><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>　　HTML（ <em>Hyper Text Markup Language</em> ），超文本标记语言。它包括一系列标签，通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。它是构成Web页面（Page）的基础。</p>
+<p>　　万维网（world wide web，简称www）上的一个超媒体文档称之为一个页面（Page）。作为一个组织或者个人在万维网上放置开始点的页面称为主页（Homepage）或首页，主页中通常包括有指向其他相关页面或其他节点的指针（超级链接），所谓超级链接，就是一种统一资源定位器（Uniform Resource Locator，URL）指针，通过激活（Click）它，可使浏览器方便地获取新的网页。这也是HTML获得广泛应用的最重要的原因之一。在逻辑上将视为一个整体的一系列页面的有机集合称为网站（Website或Site）。超文本标记语言（HTML）是为“网页创建和其它可在网页浏览器中看到的信息”设计的一种标记语言。</p>
+<p>　　超文本标记语言是标准通用标记语言下的一个应用，也是一种规范，一种标准，它通过标记符号来标记要显示的网页中的各个部分。网页文件本身是一种文本文件，通过在文本文件中添加标记符，可以告诉浏览器如何显示其中的内容（如：文字如何处理，画面如何安排，图片如何显示等）。浏览器按顺序阅读网页文件，然后根据标记符解释和显示其标记的内容，对书写出错的标记将不指出其错误，且不停止其解释执行过程，编制者只能通过显示效果来分析出错原因和出错部位。但需要注意的是，对于不同的浏览器，对同一标记符可能会有不完全相同的解释，因而可能会有不同的显示效果。</p>
+<hr align="center"  noshade color="beige" size=3px>
+
+<h1 id="HTML文档结构"><a href="#HTML文档结构" class="headerlink" title="HTML文档结构"></a>HTML文档结构</h1><p>　　<code>&lt;html&gt; </code>与 <code>&lt;/html&gt;</code> 标签限定了文档的开始点和结束点，在它们之间是文档的<strong>头部</strong>和<strong>主体</strong>。在头部内容里可以定义标题、样式等，文档的主体内容就是要显示的信息。</p>
+<p>　　一个简单的HTML文档，包含尽可能少的必需的标签：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>文档的标题<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>一级标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><br>    文档的内容...<br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<hr align="center"  noshade color="beige" size=3px>
+
+<h1 id="HTML-lt-DOCTYPE-gt-声明"><a href="#HTML-lt-DOCTYPE-gt-声明" class="headerlink" title="HTML &lt;!DOCTYPE&gt; 声明"></a>HTML <code>&lt;!DOCTYPE&gt; </code>声明</h1><p><code>&lt;!DOCTYPE&gt;</code>声明位于文档中的最前面的位置，处于 <code>&lt;html&gt;</code> 标签之前。</p>
+<p><code>&lt;!DOCTYPE&gt;</code> 声明不是一个 HTML 标签；它是用来告知 Web 浏览器页面使用了哪种 HTML 版本。</p>
+<p>在 HTML 4.01 中，<code>&lt;!DOCTYPE&gt;</code> 声明需引用 DTD （文档类型声明），因为 HTML 4.01 是基于 SGML （<em>Standard Generalized Markup Language</em> 标准通用标记语言）。DTD 指定了标记语言的规则，确保了浏览器能够正确的渲染内容。</p>
+<p>HTML5 不是基于 SGML，因此不要求引用 DTD。</p>
+<p><strong>提示：</strong></p>
+<ul>
+<li><p>总是给您的 HTML 文档添加 <code>&lt;!DOCTYPE&gt;</code> 声明，确保浏览器能够预先知道文档类型。</p>
+</li>
+<li><p><code>&lt;!DOCTYPE&gt;</code> 标签没有结束标签。</p>
+</li>
+<li><p><code>&lt;!DOCTYPE&gt;</code> 声明不区分大小写。</p>
+</li>
+</ul>
+<hr align="center"  noshade color="beige" size=3px>
+
+<h1 id="HTML-lt-meta-gt-标签"><a href="#HTML-lt-meta-gt-标签" class="headerlink" title="HTML &lt;meta&gt; 标签"></a>HTML <code>&lt;meta&gt; </code>标签</h1><h2 id="HTML-lt-meta-gt-charset-属性"><a href="#HTML-lt-meta-gt-charset-属性" class="headerlink" title="HTML &lt;meta&gt; charset 属性"></a>HTML <code>&lt;meta&gt; </code>charset 属性</h2><p>　　charset 属性规定 HTML 文档的字符编码。语法：<code>&lt;meta charset=&quot;character_set&quot;&gt;</code></p>
+<p>　　<em>character_set</em> 常用的值：</p>
+<ul>
+<li><p>UTF-8 - Unicode 字符编码</p>
+</li>
+<li><p>ISO-8859-1 - 拉丁字母表的字符编码</p>
+</li>
+</ul>
+<hr align="center"  noshade color="beige" size=3px>
+
+<h1 id="HTML-lt-head-gt-标签"><a href="#HTML-lt-head-gt-标签" class="headerlink" title="HTML &lt;head&gt; 标签"></a>HTML <code>&lt;head&gt; </code>标签</h1><p><code>&lt;head&gt; </code>元素是所有头部元素的容器。</p>
+<p><code>&lt;head&gt; </code>元素必须包含文档的标题（title），可以包含脚本、样式、meta 信息 以及其他更多的信息。</p>
+<p>以下列出的元素能被用在<code>&lt;head&gt;</code>元素内部：</p>
+<ul>
+<li><p><code>&lt;title&gt;</code>（在头部中，这个元素是必需的）</p>
+</li>
+<li><p><code>&lt;style&gt;</code></p>
+</li>
+<li><p><code>&lt;base&gt;</code></p>
+</li>
+<li><p><code>&lt;link&gt;</code></p>
+</li>
+<li><p><code>&lt;meta&gt;</code></p>
+</li>
+<li><p><code>&lt;script&gt;</code></p>
+</li>
+<li><p><code>&lt;noscript&gt;</code></p>
+</li>
+</ul>
+<hr align="center"  noshade color="beige" size=3px>
+
+<h1 id="HTML-lt-body-gt-标签"><a href="#HTML-lt-body-gt-标签" class="headerlink" title="HTML &lt;body&gt; 标签"></a>HTML <code>&lt;body&gt; </code>标签</h1><p><code>&lt;body&gt;</code> 标签定义文档的主体。</p>
+<p><code>&lt;body&gt;</code>元素包含文档的所有内容（比如文本、超链接、图像、表格和列表等等）。</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-body-alink.html">alink</a></td>
+<td align="left"><em>color</em></td>
+<td align="left">HTML5 不支持。 HTML 4.01 已废弃。 规定文档中活动链接的颜色。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-body-background.html">background</a></td>
+<td align="left"><em>URL</em></td>
+<td align="left">HTML5 不支持。 HTML 4.01 已废弃。 规定文档的背景图像。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-body-bgcolor.html">bgcolor</a></td>
+<td align="left"><em>color</em></td>
+<td align="left">HTML5 不支持。 HTML 4.01 已废弃。规定文档的背景颜色。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-body-link.html">link</a></td>
+<td align="left"><em>color</em></td>
+<td align="left">HTML5 不支持。 HTML 4.01 已废弃。规定文档中未访问链接的颜色。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-body-text.html">text</a></td>
+<td align="left"><em>color</em></td>
+<td align="left">HTML5 不支持。 HTML 4.01 已废弃。规定文档中所有文本的颜色。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-body-vlink.html">vlink</a></td>
+<td align="left"><em>color</em></td>
+<td align="left">HTML5 不支持。 HTML 4.01 已废弃。规定文档中已被访问链接的颜色。</td>
+</tr>
+</tbody></table>
+<p></p>
+
+<hr align="center"  noshade color="beige" size=3px>
+
+<h1 id="HTML-lt-h1-gt-lt-h6-gt-标签"><a href="#HTML-lt-h1-gt-lt-h6-gt-标签" class="headerlink" title="HTML &lt;h1&gt; - &lt;h6&gt; 标签"></a>HTML <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> 标签</h1><p>六个不同的 HTML 标题：</p>
+<h1>这是标题 1</h1> 
+<h2>这是标题 2</h2> 
+<h3>这是标题 3</h3> 
+<h4>这是标题 4</h4> 
+<h5>这是标题 5</h5> 
+<h6>这是标题 6</h6>
+
+<p><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> 标签被用来定义 HTML 标题。</p>
+<p><code>&lt;h1&gt;</code> 定义重要等级最高的标题。<code>&lt;h6&gt;</code> 定义重要等级最低的标题。</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-hn-align.html">align</a></td>
+<td align="left">left center right justify</td>
+<td align="left">HTML5 不支持。HTML 4.01 已废弃。 规定标题中文本的排列。</td>
+</tr>
+</tbody></table>
+<p><strong>HTML5 不支持 <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> align 属性。请使用 CSS 代替。</strong></p>
+<hr align="center"  noshade color="beige" size=3px>
+
+<h1 id="HTML-lt-hr-gt-标签"><a href="#HTML-lt-hr-gt-标签" class="headerlink" title="HTML &lt;hr&gt; 标签"></a>HTML <code>&lt;hr&gt;</code> 标签</h1><p><code>&lt;hr&gt;</code> 标签定义 HTML 页面中的主题变化（比如话题的转移），并显示为一条水平线。</p>
+<p><code>&lt;hr&gt;</code> 元素被用来分隔 HTML 页面中的内容（或者定义一个变化）。</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-hr-align.html">align</a></td>
+<td align="left"><em>left</em> center right</td>
+<td align="left">HTML5 不支持。HTML 4.01 已废弃。 规定 <code>&lt;hr&gt;</code> 元素的对齐方式</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-hr-noshade.html">noshade</a></td>
+<td align="left"><em>noshade</em></td>
+<td align="left">HTML5 不支持。HTML 4.01 已废弃。 规定 <code>&lt;hr&gt;</code> 元素的颜色呈现为纯色。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-hr-size.html">size</a></td>
+<td align="left"><em>pixels</em></td>
+<td align="left">HTML5 不支持。HTML 4.01 已废弃。 规定 <code>&lt;hr&gt;</code> 元素的高度。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/att-hr-width.html">width</a></td>
+<td align="left"><em>pixels %</em></td>
+<td align="left">HTML5 不支持。HTML 4.01 已废弃。 规定 <code>&lt;hr&gt;</code> 元素的宽度。</td>
+</tr>
+</tbody></table>
+<p></p>
+<hr align="center"  noshade color="beige" size=3px>
+
+<h1 id="HTML-lt-gt-注释标签"><a href="#HTML-lt-gt-注释标签" class="headerlink" title="HTML &lt;!--...--&gt; 注释标签"></a>HTML <code>&lt;!--...--&gt;</code> 注释标签</h1><p><code>&lt;!--...--&gt;</code> 注释标签用来在源文档中插入注释。注释不会在浏览器中显示。</p>
+<hr align="center"  noshade color="beige" size=3px>
+
+<h1 id="HTML-字符实体"><a href="#HTML-字符实体" class="headerlink" title="HTML 字符实体"></a>HTML 字符实体</h1><p>HTML 中的预留字符必须被替换为字符实体。</p>
+<p>如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（<em>character entities</em>）。</p>
+<p><strong>不间断空格（non-breaking space）</strong></p>
+<p>HTML 中的常用字符实体是不间断空格(&amp;nbsp;)。</p>
+<p>浏览器总是会截短 HTML 页面中的空格。如果您在文本中写 10 个空格，在显示该页面之前，浏览器会删除它们中的 9 个。如需在页面中增加空格的数量，您需要使用 &amp;nbsp; 字符实体。</p>
+<p><strong>HTML 中有用的字符实体</strong></p>
+<p><strong>注释：</strong>实体名称对大小写敏感！</p>
+<table>
+<thead>
+<tr>
+<th align="left">显示结果</th>
+<th align="left">描述</th>
+<th align="left">实体名称</th>
+<th align="left">实体编号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"></td>
+<td align="left">空格</td>
+<td align="left">&amp;nbsp;</td>
+<td align="left">&amp;#160;</td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">小于号</td>
+<td align="left">&lt;</td>
+<td align="left">&amp;#60;</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">大于号</td>
+<td align="left">&gt;</td>
+<td align="left">&amp;#62;</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">和号</td>
+<td align="left">&amp;</td>
+<td align="left">&amp;#38;</td>
+</tr>
+<tr>
+<td align="left">“</td>
+<td align="left">引号</td>
+<td align="left">&quot;</td>
+<td align="left">&amp;#34;</td>
+</tr>
+<tr>
+<td align="left">‘</td>
+<td align="left">撇号</td>
+<td align="left">&amp;apos; (IE不支持)</td>
+<td align="left">&#39;</td>
+</tr>
+<tr>
+<td align="left">￠</td>
+<td align="left">分（cent）</td>
+<td align="left">&amp;cent;</td>
+<td align="left">&amp;#162;</td>
+</tr>
+<tr>
+<td align="left">£</td>
+<td align="left">镑（pound）</td>
+<td align="left">&amp;pound;</td>
+<td align="left">&amp;#163;</td>
+</tr>
+<tr>
+<td align="left">¥</td>
+<td align="left">元（yen）</td>
+<td align="left">&amp;yen;</td>
+<td align="left">&amp;#165;</td>
+</tr>
+<tr>
+<td align="left">€</td>
+<td align="left">欧元（euro）</td>
+<td align="left">&amp;euro;</td>
+<td align="left">&amp;#8364;</td>
+</tr>
+<tr>
+<td align="left">§</td>
+<td align="left">小节</td>
+<td align="left">&amp;sect;</td>
+<td align="left">&amp;#167;</td>
+</tr>
+<tr>
+<td align="left">©</td>
+<td align="left">版权（copyright）</td>
+<td align="left">&amp;copy;</td>
+<td align="left">&amp;#169;</td>
+</tr>
+<tr>
+<td align="left">®</td>
+<td align="left">注册商标</td>
+<td align="left">&amp;reg;</td>
+<td align="left">&amp;#174;</td>
+</tr>
+<tr>
+<td align="left">™</td>
+<td align="left">商标</td>
+<td align="left">&amp;trade;</td>
+<td align="left">&amp;#8482;</td>
+</tr>
+<tr>
+<td align="left">×</td>
+<td align="left">乘号</td>
+<td align="left">&amp;times;</td>
+<td align="left">&amp;#215;</td>
+</tr>
+<tr>
+<td align="left">÷</td>
+<td align="left">除号</td>
+<td align="left">&amp;divide;</td>
+<td align="left">&amp;#247;</td>
+</tr>
+</tbody></table>
+<p></p>
+<hr align="center"  noshade color="beige" size=3px>
+
+<h1 id="HTML文本格式"><a href="#HTML文本格式" class="headerlink" title="HTML文本格式"></a>HTML文本格式</h1><table>
+<thead>
+<tr>
+<th align="left">标签</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-acronym.html"><code>&lt;acronym&gt;</code></a></td>
+<td align="left">HTML5不再支持。 定义只取首字母的缩写。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-abbr.html"><code>&lt;abbr&gt;</code></a></td>
+<td align="left">定义一个缩写。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-address.html"><code>&lt;address&gt;</code></a></td>
+<td align="left">定义文档作者或拥有者的联系信息。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-b.html"><code>&lt;b&gt;</code></a></td>
+<td align="left">定义粗体文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-bdo.html"><code>&lt;bdo&gt;</code></a></td>
+<td align="left">定义文本的方向。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-big.html"><code>&lt;big&gt;</code></a></td>
+<td align="left">HTML5不再支持。 定义大号文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-blockquote.html"><code>&lt;blockquote&gt;</code></a></td>
+<td align="left">定义块引用。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-center.html"><code>&lt;center&gt;</code></a></td>
+<td align="left">HTML5不再支持。 HTML 4.01 已废弃。定义居中文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-cite.html"><code>&lt;cite&gt;</code></a></td>
+<td align="left">定义引用(citation)。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-code.html"><code>&lt;code&gt;</code></a></td>
+<td align="left">定义计算机代码文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-del.html"><code>&lt;del&gt;</code></a></td>
+<td align="left">定义被删除文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-em.html"><code>&lt;em&gt;</code></a></td>
+<td align="left">定义强调文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-font.html"><code>&lt;font&gt;</code></a></td>
+<td align="left">HTML5不再支持。 HTML 4.01 已废弃。 定义文本的字体、尺寸和颜色</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-i.html"><code>&lt;i&gt;</code></a></td>
+<td align="left">定义斜体文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-ins.html"><code>&lt;ins&gt;</code></a></td>
+<td align="left">定义被插入文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-kbd.html"><code>&lt;kbd&gt;</code></a></td>
+<td align="left">定义键盘文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-mark.html"><code>&lt;mark&gt;</code></a></td>
+<td align="left">定义带有记号的文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-meter.html"><code>&lt;meter&gt;</code></a></td>
+<td align="left">定义度量衡。仅用于已知最大和最小值的度量。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-pre.html"><code>&lt;pre&gt;</code></a></td>
+<td align="left">定义预格式文本</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-progress.html"><code>&lt;progress&gt;</code></a></td>
+<td align="left">定义运行中的任务进度（进程）。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-q.html"><code>&lt;q&gt;</code></a></td>
+<td align="left">定义短的引用。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-rt.html"><code>&lt;rt&gt;</code></a></td>
+<td align="left">定义字符（中文注音或字符）的解释或发音。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-ruby.html"><code>&lt;ruby&gt;</code></a></td>
+<td align="left">定义 ruby 注释（中文注音或字符）。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-s.html"><code>&lt;s&gt;</code></a></td>
+<td align="left">定义加删除线的文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-samp.html"><code>&lt;samp&gt;</code></a></td>
+<td align="left">定义计算机代码样本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-small.html"><code>&lt;small&gt;</code></a></td>
+<td align="left">定义小号文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-strong.html"><code>&lt;strong&gt;</code></a></td>
+<td align="left">定义语气更为强烈的强调文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-sub.html"><code>&lt;sub&gt;</code></a></td>
+<td align="left">定义下标文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-sup.html"><code>&lt;sup&gt;</code></a></td>
+<td align="left">定义上标文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-time.html"><code>&lt;time&gt;</code></a></td>
+<td align="left">定义一个日期&#x2F;时间</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-u.html"><code>&lt;u&gt;</code></a></td>
+<td align="left">定义下划线文本。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-var.html"><code>&lt;var&gt;</code></a></td>
+<td align="left">定义文本的变量部分。</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-wbr.html"><code>&lt;wbr&gt;</code></a></td>
+<td align="left">规定在文本中的何处适合添加换行符。</td>
+</tr>
+</tbody></table>
+<div id="paginator"></div></div><div id="post-footer"><hr><a href="/2022/02/22/startJava/">JDK&amp;IDEA Next →</a><hr></div><div id="bottom-btn"><a id="to-index" href="#post-index" title="index">≡</a><a id="to-top" href="#post-title" title="to top">∧</a></div><div id="comments"></div><script>var gitalk = new Gitalk({
+ clientID: 'eba00f1c22627ebe12ea',
+ clientSecret: '67d51ac6ee4e8889a8a7798cf9fe7e1775e618ba',
+ repo: 'yorhachq.github.io',
+ owner: 'yorhachq',
+ admin: ['yorhachq'],
+ id: location.pathname,
+})
+gitalk.render("comments")</script></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/"> Dr.YoRHaCHQ</a></h1><section id="total"><a id="total-archives" href="/archives"><span class="total-title">Archives Total:</span><span class="total-number">9</span></a><div id="total-tags"><span class="total-title">Tags:</span><span class="total-number">12</span></div><div id="total-categories"><span class="total-title">Categories:</span><span class="total-number">5</span></div></section></div><div id="aside-block"><h1>INDEX</h1><div id="post-index"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">HTML文档结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-lt-DOCTYPE-gt-%E5%A3%B0%E6%98%8E"><span class="toc-number">3.</span> <span class="toc-text">HTML &lt;!DOCTYPE&gt; 声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-lt-meta-gt-%E6%A0%87%E7%AD%BE"><span class="toc-number">4.</span> <span class="toc-text">HTML &lt;meta&gt; 标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-lt-meta-gt-charset-%E5%B1%9E%E6%80%A7"><span class="toc-number">4.1.</span> <span class="toc-text">HTML &lt;meta&gt; charset 属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-lt-head-gt-%E6%A0%87%E7%AD%BE"><span class="toc-number">5.</span> <span class="toc-text">HTML &lt;head&gt; 标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-lt-body-gt-%E6%A0%87%E7%AD%BE"><span class="toc-number">6.</span> <span class="toc-text">HTML &lt;body&gt; 标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-lt-h1-gt-lt-h6-gt-%E6%A0%87%E7%AD%BE"><span class="toc-number">7.</span> <span class="toc-text">HTML &lt;h1&gt; - &lt;h6&gt; 标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">这是标题 1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">8.1.</span> <span class="toc-text">这是标题 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">8.1.1.</span> <span class="toc-text">这是标题 3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">8.1.1.1.</span> <span class="toc-text">这是标题 4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">8.1.1.1.1.</span> <span class="toc-text">这是标题 5</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link"><span class="toc-number">8.1.1.1.1.1.</span> <span class="toc-text">这是标题 6</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-lt-hr-gt-%E6%A0%87%E7%AD%BE"><span class="toc-number">9.</span> <span class="toc-text">HTML &lt;hr&gt; 标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-lt-gt-%E6%B3%A8%E9%87%8A%E6%A0%87%E7%AD%BE"><span class="toc-number">10.</span> <span class="toc-text">HTML &lt;!--...--&gt; 注释标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93"><span class="toc-number">11.</span> <span class="toc-text">HTML 字符实体</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F"><span class="toc-number">12.</span> <span class="toc-text">HTML文本格式</span></a></li></ol></div></div><footer><nobr><span class="text-title">Copyright ©</span><span class="text-content">2021-2022</span></nobr><wbr><nobr><span class="text-title">YoRHa_CHQ</span><span class="text-content">All rights reserved.</span></nobr><wbr><wbr><nobr>published with&nbsp;<a target="_blank" rel="noopener" href="http://hexo.io/about/">Hexo&nbsp;</a></nobr><wbr><nobr>Theme&nbsp;<a target="_blank" rel="noopener" href="https://github.com/yorhachq/hexo-theme-arknights">Arknights&nbsp;</a></nobr><wbr><nobr>by&nbsp;<a target="_blank" rel="noopener" href="https://github.com/yorhachq">YoRHa_CHQ</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/arknights.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script></body></html>

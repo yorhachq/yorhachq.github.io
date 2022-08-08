@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>图片测试 | GrailCloud</title><script src="//unpkg.com/valine/dist/Valine.min.js"></script><link rel="stylesheet" href="/css/gitalk.css"><script src="/js/gitalk.js"></script><script src="https://unpkg.com/mermaid@8.13.5/dist/mermaid.min.js"></script><script>mermaid.initialize({
+  startOnLoad: true
+  , theme: 'dark'
+});</script><link rel="stylesheet" href="/css/arknights.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark-reasonable.min.css"><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="GrailCloud" type="application/atom+xml">
+</head><body style="background-image:url(https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg);"><header><nav><a href="/">Home</a><a href="/archives/">Archives</a><a href="/info/">Info</a><a href="/links/">Links</a></nav></header><main><article><div id="post-bg"><div id="post-title"><h1>图片测试</h1><hr></div><div id="post-content"><h2 id="插入图片真的迷"><a href="#插入图片真的迷" class="headerlink" title="插入图片真的迷"></a>插入图片真的迷</h2><ol>
+<li>这是使用<code>![img](file/img.jpg)</code>插入的<br><img src="/IMG_TEST/Holy_grail.jpg" alt="Holy_grail"> &lt;-这是图片，但它裂了</li>
+<li>这是使用<code>![img](./file/img.jpg)</code>插入的<br><img src="/./IMG_TEST/Holy_grail.jpg" alt="Holy_grail"> &lt;-它也一样</li>
+</ol>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>​	如你所见，这两个图<strong>裂了</strong>，但在Typora上能预览🤦‍♂️</p>
+<p>​	还是改个路径统一管理吧QAQ：</p>
+<ul>
+<li><p>使用<code>![img](../image/file/img.jpg)</code>插入</p>
+<p><img src="/../image/IMG_TEST/Holy_grail.jpg" alt="Holy_grail"></p>
+<p>　　在Typora上能预览，网页上也正常显示，就好起来了🤷‍♂️</p>
+</li>
+</ul>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>　　  也可使用HTML书写：<code>&lt;img src=&quot;url&quot;&gt;</code></p>
+<p>　　  若需设定图片位置，可使用以下HTML标签：　<br>　　<br>　　　　1. <code>&lt;center&gt;&lt;/center&gt;</code><br>　　　　　　　　<br>　　　　2. <code>&lt;div align=&quot;center&quot;&gt;&lt;/div&gt;</code></p>
+<div id="paginator"></div></div><div id="post-footer"><hr><a href="/2022/02/08/%E7%B2%89%E6%AF%9B%E8%90%BD%E5%9C%B0/">← Prev 粉毛落地了XD</a><span style="color: #fe2"> | </span><a href="/2022/01/30/START/">START Next →</a><hr></div><div id="bottom-btn"><a id="to-index" href="#post-index" title="index">≡</a><a id="to-top" href="#post-title" title="to top">∧</a></div><div id="comments"></div><script>var gitalk = new Gitalk({
+ clientID: 'eba00f1c22627ebe12ea',
+ clientSecret: '67d51ac6ee4e8889a8a7798cf9fe7e1775e618ba',
+ repo: 'yorhachq.github.io',
+ owner: 'yorhachq',
+ admin: ['yorhachq'],
+ id: location.pathname,
+})
+gitalk.render("comments")</script></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/"> Dr.YoRHaCHQ</a></h1><section id="total"><a id="total-archives" href="/archives"><span class="total-title">Archives Total:</span><span class="total-number">9</span></a><div id="total-tags"><span class="total-title">Tags:</span><span class="total-number">12</span></div><div id="total-categories"><span class="total-title">Categories:</span><span class="total-number">5</span></div></section></div><div id="aside-block"><h1>INDEX</h1><div id="post-index"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9C%9F%E7%9A%84%E8%BF%B7"><span class="toc-number">1.</span> <span class="toc-text">插入图片真的迷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-number">3.</span> <span class="toc-text">补充</span></a></li></ol></div></div><footer><nobr><span class="text-title">Copyright ©</span><span class="text-content">2021-2022</span></nobr><wbr><nobr><span class="text-title">YoRHa_CHQ</span><span class="text-content">All rights reserved.</span></nobr><wbr><wbr><nobr>published with&nbsp;<a target="_blank" rel="noopener" href="http://hexo.io/about/">Hexo&nbsp;</a></nobr><wbr><nobr>Theme&nbsp;<a target="_blank" rel="noopener" href="https://github.com/yorhachq/hexo-theme-arknights">Arknights&nbsp;</a></nobr><wbr><nobr>by&nbsp;<a target="_blank" rel="noopener" href="https://github.com/yorhachq">YoRHa_CHQ</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/arknights.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script></body></html>
